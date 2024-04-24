@@ -1,11 +1,10 @@
 package InterviewPrep.Backtracking;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
-public class Combination {
+public class CombinationSum {
 
         public static List<List<Integer>> combinationSum(int[] a, int target) {
             List<List<Integer>> res = new ArrayList<>();

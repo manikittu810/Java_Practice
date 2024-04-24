@@ -1,12 +1,11 @@
 package InterviewPrep.Backtracking;
 
-import javax.swing.plaf.synth.SynthLookAndFeel;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
-public class combinationTwo {
+public class combinationSumTwo {
     public static List<List<Integer>> combinationTwo(int[] a, int target){
         Arrays.sort(a);
         List<List<Integer>> res = new ArrayList<>();
