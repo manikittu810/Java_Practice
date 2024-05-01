@@ -28,7 +28,6 @@ public class MaxSumInRangeK {
                 sum+=a[i];
             }
             max=Math.max(max,sum);
-//            sum-=a[l];
             l++;
             r++;
         }
