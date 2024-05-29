@@ -31,3 +31,5 @@ public class Parent {
         System.out.println("Parent details : Hair color : " + getColor() + " Nationality : " + getNationality()+ " Parent Age : " + getAge());
     }
 }
+
+//always execute parent,child1,child2,child3 together 
