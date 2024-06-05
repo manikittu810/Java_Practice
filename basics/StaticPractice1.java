@@ -29,5 +29,8 @@ public class StaticPractice1 {
 
         obj1.display();
 
+        System.out.println(obj.methodDummy2(2,4));
+        System.out.println(obj1.methodDummy2(4,5));
+        StaticPractice obj2 = new StaticPractice(10);
     }
 }

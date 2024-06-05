@@ -4,8 +4,10 @@ public class StaticPractice {
     StaticPractice(){ // default constructor
 
     }
+    int a;
     StaticPractice(int a){ //parameterized constructor
-
+    this.a =a;
+        System.out.println("Parameterized constructor called : " + this.a);
     }
 int memberVariable; // member variable
 static int staticVariable =100;//static variable or class variable
@@ -15,7 +17,7 @@ static int staticVariable =100;//static variable or class variable
     }
 
     //method parameter
-     public int methdDummy2(int a, int b){
+     public int methodDummy2(int a, int b){
          return a+b;
      }
     // we can also change the value of static variable of
