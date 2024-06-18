@@ -1,6 +1,4 @@
-package InterviewPrep.Class.MethodsInDepth;
-
-import java.util.Scanner;
+package InterviewPrep.Oops.Class.MethodsInDepth;
 
 public class Calculation {
 //    private static int sum(int val1,int val2)throws ArithmeticException{

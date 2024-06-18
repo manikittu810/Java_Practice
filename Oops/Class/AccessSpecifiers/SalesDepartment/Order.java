@@ -1,4 +1,4 @@
-package InterviewPrep.Class.AccessSpecifiers.SalesDepartment;
+package InterviewPrep.Oops.Class.AccessSpecifiers.SalesDepartment;
 
 public class Order {
     public void getOrder(){

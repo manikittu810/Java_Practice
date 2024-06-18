@@ -1,4 +1,4 @@
-package InterviewPrep.Class;
+package InterviewPrep.Oops;
 
 public class Child2 extends Child1 {
     private String height;

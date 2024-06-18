@@ -1,4 +1,4 @@
-package InterviewPrep.Class.AbstractClass;
+package InterviewPrep.Oops.Class.AbstractClass;
 
 public abstract class Person {
     protected final static int profession(int a, int b){

@@ -1,6 +1,6 @@
-package InterviewPrep.Class.AccessSpecifiers.HumanResources;
+package InterviewPrep.Oops.Class.AccessSpecifiers.HumanResources;
 
-import InterviewPrep.Class.AccessSpecifiers.SalesDepartment.Invoice;
+import InterviewPrep.Oops.Class.AccessSpecifiers.SalesDepartment.Invoice;
 
  class JobPortal extends Invoice{
      public void getInvoiceForJobPortal(){

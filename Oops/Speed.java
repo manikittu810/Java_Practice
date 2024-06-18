@@ -1,4 +1,4 @@
-package InterviewPrep.Class;
+package InterviewPrep.Oops;
 
 public  class Speed implements Abstraction, Abstraction1 {
     protected int speed;

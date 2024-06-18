@@ -1,4 +1,4 @@
-package InterviewPrep.Class;
+package InterviewPrep.Oops;
 
 public class Parent {
     String color;

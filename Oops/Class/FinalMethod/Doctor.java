@@ -1,4 +1,4 @@
-package InterviewPrep.Class.FinalMethod;
+package InterviewPrep.Oops.Class.FinalMethod;
 
 public class Doctor extends Person{
     protected void profession(){
