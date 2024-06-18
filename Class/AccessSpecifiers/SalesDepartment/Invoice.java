@@ -7,4 +7,11 @@ public class Invoice {
     public void printInvoice(){
         getInvoice();
     }
+    private int getInvoice(int a){
+         return a;
+    }
+
+
+
+
 }
