@@ -1,4 +1,4 @@
-package InterviewPrep.Oops.AbstractionImpl;
+package InterviewPrep.Oops.AbstractionImpl.ShapePractice;
 
 abstract class Shape {
     String color;
