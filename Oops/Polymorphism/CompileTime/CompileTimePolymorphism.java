@@ -1,4 +1,4 @@
-package InterviewPrep.Oops.Polymorphism;
+package InterviewPrep.Oops.Polymorphism.CompileTime;
 
 class A{
     int doSum(int a,int b){
