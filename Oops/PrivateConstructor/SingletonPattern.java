@@ -4,7 +4,7 @@ public class SingletonPattern {
     private static SingletonPattern instance;
 
     private SingletonPattern(){
-        System.out.println("in th private constructor, creating new instance");
+        System.out.println("in the private constructor, creating new instance");
 
     }
 
