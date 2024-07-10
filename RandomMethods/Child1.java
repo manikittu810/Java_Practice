@@ -1,4 +1,4 @@
-package InterviewPrep.Oops;
+package InterviewPrep.RandomMethods;
 
 public class Child1 extends Parent {
     private String language;

@@ -1,4 +1,4 @@
-package InterviewPrep.Oops;
+package InterviewPrep.RandomMethods;
 
 public  class Speed implements Abstraction, Abstraction1 {
     protected int speed;

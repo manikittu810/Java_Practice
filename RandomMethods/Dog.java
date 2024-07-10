@@ -1,4 +1,4 @@
-package InterviewPrep.Oops;
+package InterviewPrep.RandomMethods;
 
 public class Dog {
     int age;

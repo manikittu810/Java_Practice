@@ -1,6 +1,7 @@
 package InterviewPrep.Trees.SameTree;
 
 import InterviewPrep.Trees.Node;
+import InterviewPrep.Trees.SameTree.SameTree;
 
 import java.util.Scanner;
 
