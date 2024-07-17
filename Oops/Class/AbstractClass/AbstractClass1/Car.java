@@ -6,9 +6,9 @@ public abstract class Car {
         this.mileage=mileage;
     }
     public abstract void pressBrake();
-    public abstract void pressClutch();
     public int getNumberOfWheels(){
         return 4;
     }
+    public abstract void pressClutch();
 }
 
