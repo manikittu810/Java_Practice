@@ -1,4 +1,4 @@
-package InterviewPrep.Oops.Class.AbstractClass;
+package InterviewPrep.Oops.Class.AbstractClass.AbstractClass1;
 
 public abstract class Car {
     int mileage;

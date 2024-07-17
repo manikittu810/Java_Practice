@@ -1,4 +1,4 @@
-package InterviewPrep.Oops.Class.AbstractClass;
+package InterviewPrep.Oops.Class.AbstractClass.AbstractClass1;
 
 public  class Audi extends BMW {
     Audi(int mileage) {
