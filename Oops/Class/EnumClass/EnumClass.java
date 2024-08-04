@@ -15,8 +15,5 @@ class Main{
         //usage of valueOf() and name()
        EnumClass obj1 = EnumClass.valueOf("SUNDAY");
         System.out.println(obj1.name());
-
-
-
     }
 }
