@@ -1,4 +1,4 @@
-package InterviewPrep.Oops.Class.PjoClass;
+package InterviewPrep.Oops.Class.POJOClass;
 
 public class PojoClass {
     private int rollNumber;
