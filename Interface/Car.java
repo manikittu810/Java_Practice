@@ -14,6 +14,8 @@ class CarImpl implements Car{
 class Test{
     public static void main(String[] args) {
         CarImpl obj = new CarImpl();
+        Car obj1 = new CarImpl();
         obj.applyBreak();
+        obj1.applyBreak();
     }
 }
