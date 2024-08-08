@@ -4,11 +4,18 @@ public interface Bird {
     default boolean canBreathe(){
         return true;
     }
+    default boolean method(){
+        return true;
+    }
 }
 interface Something extends Bird{
      default boolean canBreathe(){
         System.out.println("from child interface extending both classes");
         return true;
+    }
+    default boolean method2(){
+         boolean m = Bird.super.method();
+         return m;
     }
 }
 class SomethingDiff implements Something,Bird{
@@ -58,6 +65,7 @@ class Test{
 
         Something obj1 = new SomethingDiff();
         obj1.canBreathe();
+        System.out.println(obj1.method2());
 
 
         Impl obj3 = new Impl2();
