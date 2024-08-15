@@ -31,3 +31,4 @@ class Test{
     }
 
 }
+//Using anonymous  class

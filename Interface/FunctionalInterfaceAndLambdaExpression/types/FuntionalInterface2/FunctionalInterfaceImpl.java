@@ -1,4 +1,4 @@
-package InterviewPrep.Interface.FunctionalInterfaceAndLambdaExpression.types;
+package InterviewPrep.Interface.FunctionalInterfaceAndLambdaExpression.types.FuntionalInterface2;
 
 @FunctionalInterface
 public interface FunctionalInterfaceImpl {
