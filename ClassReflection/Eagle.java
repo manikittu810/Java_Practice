@@ -1,8 +1,10 @@
 package InterviewPrep.ClassReflection;
 
+import java.lang.reflect.Method;
+
 public class Eagle {
     private String name;
-    protected int n;
+    public int n;
     public void display(){
         System.out.println("Nothing to display");
     }
@@ -13,18 +15,21 @@ public class Eagle {
         System.out.println(s + "This is the name");
     }
 }
-class ObjectTes{
+class ObjectTest{
     public static void main(String[] args) throws NoSuchFieldException {
         Class obj = Eagle.class;
-        System.out.println(obj.getName());
+//        Method[] Methods=obj.getMethods();
+        Method[] Methods=obj.getDeclaredMethods();
+        for(Method method : Methods){
+            System.out.println(method.getName());
+            System.out.println(method.getReturnType());
 
-//        Class obj2 = null;
-//        try {
-//            obj2 = Class.forName("Eagle");
-//        } catch (ClassNotFoundException e) {
-//            throw new RuntimeException(e);
-//        }
-//        System.out.println(obj2.getFields());
+            System.out.println(method.getDeclaringClass());
+            System.out.println("********");
+
+        }
+        System.out.println(obj.getName());
         System.out.println(obj.getFields());
+        System.out.println(obj.getModifiers());
     }
 }
