@@ -14,3 +14,5 @@ public class safeVarargsAnnotations {
     }
 }
 //Need to complete Main methods as well
+
+//Heap Pollution -> object of one TYPE storing the REFERENCE of another TYPE.
