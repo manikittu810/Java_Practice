@@ -1,9 +1,11 @@
 package InterviewPrep.Annotations;
 
+@FunctionalInterface
 public interface SuppressWarningsAnnotation {
     @Deprecated
     void display();
 }
+//----------------------------------------------
 class Impl1 implements SuppressWarningsAnnotation{
     @Deprecated
     @Override
@@ -11,7 +13,7 @@ class Impl1 implements SuppressWarningsAnnotation{
         System.out.println("Hello");
     }
 }
-
+//-----------------------------------------------
 class Test2{
     @SuppressWarnings("deprecation") // at method level
     public static void main(String[] args) {
@@ -19,6 +21,7 @@ class Test2{
         obj.display();
     }
 }
+//-----------------------------------------------
 
 @SuppressWarnings("all") // at class level
 class Test3{
@@ -27,3 +30,13 @@ class Test3{
         obj2.display();
     }
 }
+//-----------------------------------------------
+
+@SuppressWarnings("deprecation") //Implemented FunctionalInterface Annotation
+class T{
+    public static void main(String[] args) {
+        SuppressWarningsAnnotation obj = () -> System.out.println("Hello from lambda expression");
+        obj.display();
+    }
+}
+//-----------------------------------------------
