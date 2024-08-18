@@ -9,7 +9,7 @@ public class safeVarargsAnnotations {
         Object[] obj = logNumbersList;
         List<String> s= new ArrayList<>();
         s.add("hello");
-        obj[0] = s;
+        obj[0] = s; // object of one TYPE storing the REFERENCE of another TYPE.
         /* ((Object[]) logNumbersList)[0] = s; */
     }
 }
