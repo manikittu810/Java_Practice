@@ -13,9 +13,17 @@ class Impl1 implements SuppressWarningsAnnotation{
 }
 
 class Test2{
-    @SuppressWarnings("deprecation")
+    @SuppressWarnings("deprecation") // at method level
     public static void main(String[] args) {
         Impl1 obj = new Impl1();
         obj.display();
+    }
+}
+
+@SuppressWarnings("deprecation") // at class level
+class Test3{
+    public static void main(String[] args) {
+        Impl1 obj2 = new Impl1();
+        obj2.display();
     }
 }
