@@ -20,7 +20,7 @@ class Test2{
     }
 }
 
-@SuppressWarnings("deprecation") // at class level
+@SuppressWarnings("all") // at class level
 class Test3{
     public static void main(String[] args) {
         Impl1 obj2 = new Impl1();
