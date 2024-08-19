@@ -4,8 +4,11 @@ import java.lang.annotation.*;
 
 @Documented
 //@Retention(RetentionPolicy.SOURCE) // returns null if declared source
+    
 @Retention(RetentionPolicy.RUNTIME) // returns Custom annotation name id declare RUNTIME
+    
 //@Retention(RetentionPolicy.CLASS)
+    
 @Target(ElementType.TYPE)
 public @interface MyCustomAnnotation{}
 
