@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.Stack;
 
-public class GenerateParantheseUsingStack {
+public class GenerateParanthesesUsingStack {
     protected List<String> l = new ArrayList<>();
     protected Stack<Character> st = new Stack<>();
 
@@ -41,7 +41,7 @@ class Test2{
         int t = sc.nextInt();
         for(int i=0;i<t;i++){
             int n= sc.nextInt();
-           GenerateParantheseUsingStack obj = new GenerateParantheseUsingStack();
+           GenerateParanthesesUsingStack obj = new GenerateParanthesesUsingStack();
             System.out.println(obj.generateParantheses(n));
         }
     }
