@@ -1,3 +1,5 @@
+package InterviewPrep.ExceptionHandling.RunTimeException;
+
 class RunTimeUncheckedException{
 
 public static void main(String[] args){
