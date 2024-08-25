@@ -31,6 +31,9 @@
 //or use this below
 
 package InterviewPrep.ExceptionHandling.CompileTimeException;
+
+import java.io.FileNotFoundException;
+
 public class ClassNotFoundException extends Throwable {
 
     public static void main(String[] args) throws ClassNotFoundException{
