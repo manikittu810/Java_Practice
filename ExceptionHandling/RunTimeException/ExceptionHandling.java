@@ -1,3 +1,5 @@
+package InterviewPrep.ExceptionHandling.RunTimeException;
+
 class ExceptionHandling{
 public static void main(String[] args){
 ExceptionHandling obj = new ExceptionHandling();
