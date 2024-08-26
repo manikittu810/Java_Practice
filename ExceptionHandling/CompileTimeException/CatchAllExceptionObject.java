@@ -15,6 +15,7 @@ public class CatchAllExceptionObject {
         //After Declaring the Exception in catch block you cannot implement any other catch blocks.
 
         //-------------------------------------------------------------------
+
         catch(ClassNotFoundException obj){
             System.out.println("ClassNotFoundException obj : " + obj.getMessage());
             obj.printStackTrace();
@@ -32,6 +33,8 @@ public class CatchAllExceptionObject {
 //        catch(FileNotFoundException obj2){
 //            obj2.printStackTrace();
 //        }
+
+
     }
     public static void method2(String s) throws ClassNotFoundException,InterruptedException{
         if(s.equals("smk")){
