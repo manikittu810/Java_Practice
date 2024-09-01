@@ -1,23 +1,23 @@
+package InterviewPrep.JCF;
+
+import java.util.Iterator;
 import java.util.Vector;
 public class CollectionsImpl{
-public static void main(String[] args){
+public static void main(String[] args) throws Exception{
 System.out.println("Implementing vector : ");
 Vector<Integer> v = new Vector<>();
 
 for(int i =0 ;i< 10 ;i++){
 v.add(i);
 System.out.println("The values of v are : "+ v);
-//v.removeElementAt(i);
 }
-v.forEach((Integer x) -> {
-
-System.out.println("The value goig to be removed is "+ x);
-try{
-v.remove(x);
+    System.out.println("The values present in the vector after inserting all the elements: "+ v);
+Iterator<Integer> it = v.iterator();
+while(it.hasNext()){
+    int x = it.next();
+    System.out.println("The value going to be removed from the vector is : "+x);
+    it.remove();
 }
-catch(Exception e){
-e.getMessage();
-}
-};)
+    System.out.println("values in the Vector are  : " + v);
 }
 }
