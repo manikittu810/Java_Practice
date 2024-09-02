@@ -27,7 +27,7 @@ while(it.hasNext()){
         l.add(i);
     }
     System.out.println("values in the list are  : " + l);
-    System.out.println("Printing all the values using the for each loop : ");
+    System.out.println("Printing all the values using the for each method : ");
 
     l.forEach((Integer x) -> System.out.println(x));
 
