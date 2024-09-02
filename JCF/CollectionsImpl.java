@@ -1,7 +1,7 @@
 package InterviewPrep.JCF;
 
-import java.util.Iterator;
-import java.util.Vector;
+import java.util.*;
+
 public class CollectionsImpl{
 public static void main(String[] args) throws Exception{
 System.out.println("Implementing vector : ");
@@ -19,5 +19,29 @@ while(it.hasNext()){
     it.remove();
 }
     System.out.println("values in the Vector are  : " + v);
+
+
+//Using ForEach method and for-n each loop
+    List<Integer> l =  new ArrayList<>();
+    for(int i =10 ;i>=-10;i--){
+        l.add(i);
+    }
+    System.out.println("values in the list are  : " + l);
+    System.out.println("Printing all the values using the for each loop : ");
+
+    l.forEach((Integer x) -> System.out.println(x));
+
+
+    int size = l.size();
+    ListIterator<Integer> it1 = l.listIterator(size);
+   while(it1.hasPrevious()){
+       int val2 = it1.previous();
+       if(val2 == -6){
+           it1.set(-100);
+       }
+       System.out.println("Value going to removed is :" + it1.next());
+       it1.remove();
+   }
+    System.out.println(l);
 }
 }
