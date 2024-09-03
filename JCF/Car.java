@@ -1,6 +1,7 @@
 package InterviewPrep.JCF;
 
 import java.util.*;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 public class Car implements Comparator<Car>{
     String carName;
@@ -81,7 +82,9 @@ class Test{
 //        cars.forEach((Car o) -> System.out.println(o.carName + " ..... "+ o.carType));
         Collections.sort(cars,new Car());
         cars.forEach((Car o) -> System.out.println(o.carName + " ..... "+ o.carType));
+        List<Integer> l = new CopyOnWriteArrayList<>();
 
+        Map<Integer,Integer> map = new HashMap<>();
 
     }
 }
