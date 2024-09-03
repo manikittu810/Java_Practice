@@ -143,5 +143,41 @@ public class HashMapImpl {
         }
         threadSafeSet.forEach(n -> System.out.println(n+" "));
 
+        System.out.println("LinkedHashSet Impl: ");
+
+        Set<Integer> s3 = new LinkedHashSet<>();
+        s3.add(1);
+        s3.add(3);
+        s3.add(6);
+        s3.add(9);
+        System.out.println(s3);
+
+        System.out.println("thread safe version of LinkedHashSet");
+
+        Set<Integer> s4 = Collections.synchronizedSet(new LinkedHashSet<>());
+        s4.add(-1);
+        s4.add(3);
+        s4.add(6);
+        s4.add(-9);
+        System.out.println(s4);
+
+        System.out.println("TreeSet Impl: ");
+
+        Set<Integer> s5 = new TreeSet<>();
+        s5.add(100);
+        s5.add(773);
+        s5.add(6333);
+        s5.add(9222);
+        System.out.println(s5);
+
+        System.out.println("ThreadSafe TreeSet Impl: ");
+
+        SortedSet<Integer> s6 = Collections.synchronizedSortedSet(new TreeSet<>());
+        s6.add(100);
+        s6.add(773);
+        s6.add(6333);
+        s6.add(-9222);
+        System.out.println(s6);
+
     }
 }
