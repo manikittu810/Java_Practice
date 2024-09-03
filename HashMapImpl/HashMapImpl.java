@@ -1,7 +1,5 @@
 package InterviewPrep.HashMapImpl;
-
 import java.util.*;
-
 public class HashMapImpl {
     public static void main(String[] args) {
         Map<Integer, String> map = new HashMap<>();
@@ -53,6 +51,7 @@ public class HashMapImpl {
         System.out.println();
 
         Map<Integer, String> map2 = new LinkedHashMap<>(); //maintains insertion order
+        //Map<Integer,String> map2 = new Collections.synchronizedMap(new LinkedHashMap<>()); // Thread safe version
         map2.put(null, "TEST");
         map2.put(0, null);
         map2.put(1, "A");
@@ -65,7 +64,9 @@ public class HashMapImpl {
         System.out.println();
 
 
-        Map<Integer, String> map1 = new LinkedHashMap<>(16, 0.75f, true); // maintains access order
+        Map<Integer, String> map1 = new LinkedHashMap<>(16, 0.75F, true); // maintains access order
+        //Map<Integer,String> map2 = new Collections.synchronizedMap(new LinkedHashMap<>(16, 0.75F, true)); // Thread safe version
+
         map1.put(null, "TEST");
         map1.put(0, null);
         map1.put(1, "A");
@@ -76,6 +77,31 @@ public class HashMapImpl {
         map1.get(3);
         map1.get(5);
         map1.get(1);
+        map1.get(null);
         map1.forEach((Integer n, String s) -> System.out.println(n + "...." + s));
+        System.out.println();
+
+        Map<Integer,String> tm = new TreeMap<>((Integer a, Integer b) -> b-a); //descending order
+//        tm.put(null, "TEST"); cannot insert null
+        tm.put(0, null);
+        tm.put(1, "A");
+        tm.put(3, "Zero");
+//        tm.put(null, "test");
+        tm.put(4, "s");
+        tm.put(5, "M");
+        tm.forEach((Integer a, String b) -> System.out.println(a + "....." + b));
+        System.out.println();
+
+        Map<Integer,String> tm1 = new TreeMap<>(); // if default declaration then , ascending order
+//        tm.put(null, "TEST"); cannot insert null
+        tm1.put(0, null);
+        tm1.put(1, "A");
+        tm1.put(3, "Zero");
+//        tm.put(null, "test");
+        tm1.put(4, "s");
+        tm1.put(5, "M");
+        tm1.forEach((Integer a, String b) -> System.out.println(a + "....." + b));
+        System.out.println();
+
     }
 }
