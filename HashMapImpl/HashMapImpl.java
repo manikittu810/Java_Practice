@@ -1,5 +1,8 @@
 package InterviewPrep.HashMapImpl;
 import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentSkipListSet;
+
 public class HashMapImpl {
     public static void main(String[] args) {
         Map<Integer, String> map = new HashMap<>();
@@ -102,6 +105,44 @@ public class HashMapImpl {
         tm1.put(5, "M");
         tm1.forEach((Integer a, String b) -> System.out.println(a + "....." + b));
         System.out.println();
+        Set<Integer> s1 = new HashSet<>();
+        s1.add(1);
+        s1.add(3);
+        s1.add(6);
+        s1.add(9);
+        System.out.println(s1);
+
+        Set<Integer> s2 = new HashSet<>();
+        s2.add(-1);
+        s2.add(-3);
+        s2.add(-6);
+        s2.add(-9);
+        s2.add(1);
+        System.out.println(s2);
+
+        s1.addAll(s2);
+        System.out.println(s1);
+
+        s1.retainAll(s2); //prints elements not present in set1->Intersection
+        System.out.println(s1);
+
+        s1.removeAll(s2);
+        System.out.println(s2);
+        System.out.println();
+        System.out.println("Thread Safe TreeMap Impl: ");
+
+        //Thread safe version of HashSet
+        ConcurrentSkipListSet threadSafeSet= new ConcurrentSkipListSet<>();
+        threadSafeSet.add(1);
+        threadSafeSet.add(2);
+        Iterator<Integer> it = threadSafeSet.iterator();
+        while(it.hasNext()){
+            int val = it.next();
+            if(val==2){
+                threadSafeSet.add(3);
+            }
+        }
+        threadSafeSet.forEach(n -> System.out.println(n+" "));
 
     }
 }
