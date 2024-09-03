@@ -73,14 +73,12 @@ public class HashMapImpl {
         map1.put(0,null);
         map1.put(1,"A");
         map1.put(3,"Zero");
-        map1.put(2,"B");
-        map1.put(3,"Zero");
-        map1.put(1,"A");
-        map1.put(0,null);
-        map1.put(null,"TEST");
         map1.put(null,"test");
         map1.put(4,"s");
         map1.put(5,"M");
+        map1.get(3);
+        map1.get(5);
+        map1.get(1);
         map1.forEach((Integer n,String s ) -> System.out.println(n +"...."+s));
     }
 }
