@@ -5,6 +5,7 @@ import InterviewPrep.LinkedList.SinglyLinkedList;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
@@ -160,5 +161,75 @@ public class StreamsImpl {
         System.out.println("....................................................");
 
         System.out.println("Sequence of stream operations example : ");
+        List<Integer> numbers2 = Arrays.asList(2,1,4,7,10);
+        Stream<Integer> numberStream3 = numbers2.stream()
+                .filter((Integer val)->val>=3)
+                .peek((Integer val)-> System.out.println("after filtering : " +val))
+                .map((Integer val)->(val*-1))
+                .peek((Integer val) -> System.out.println("after negating : "+val))
+                .sorted()
+                .peek((Integer val)-> System.out.println("after sorted : "+val));
+
+        List<Integer> filterNumberStream =numberStream3.collect(Collectors.toList());
+        System.out.println("Understand the output : " + filterNumberStream);
+        System.out.println("....................................................");
+        System.out.println("Different Terminal Operations : ");
+        System.out.println("forEach<Consumer<T>action : ");
+        List<Integer> a =Arrays.asList(2,1,4,7,10);
+        a.stream().filter((Integer val) ->  val>=3).forEach((Integer val) -> System.out.println(val));
+        System.out.println("toArray() : ");
+        List<Integer> b =Arrays.asList(2,1,4,7,10);
+        Object[] filteredNumberArrType1 = b.stream().filter((Integer val) -> val>=3).toArray();
+        System.out.println(filteredNumberArrType1);
+        Integer[] filteredNumberArrType2 = b.stream().filter((Integer val) -> val>=3).toArray((int size)->new Integer[size]);
+        System.out.println(filteredNumberArrType2);
+        System.out.println("reduce<BinaryOperator<T> accumulator>");
+        List<Integer> c =Arrays.asList(2,1,4,7,10);
+
+        Optional<Integer> reducedVal = c.stream().reduce((Integer val1 , Integer val2) -> val1+val2);
+        System.out.println("reduce : "+reducedVal.get());
+        System.out.println("collect(Collector<T,A,R>collector)");
+        List<Integer> d = Arrays.asList(2,1,4,7,10);
+        List<Integer> filteredNumber = d.stream().filter((Integer val)->val>=3).collect(Collectors.toList());
+        System.out.println(filteredNumber);
+        List<Integer> f = Arrays.asList(2,1,4,7,10);
+
+        Optional<Integer> filteredNumber1 = f.stream().filter((Integer val)->val>=3).min((Integer val1,Integer val2) -> val1-val2);
+
+        System.out.println(filteredNumber1.get());
+        Optional<Integer> filteredNumber2 = f.stream().filter((Integer val)->val>=3).min((Integer val1,Integer val2) -> val2-val1);
+        System.out.println(filteredNumber2.get());
+
+        Optional<Integer> filteredNumber3 = f.stream().filter((Integer val)->val>=3).max((Integer val1,Integer val2) -> val2-val1);
+        System.out.println(filteredNumber3.get());
+
+        Optional<Integer> filteredNumber4 = f.stream().filter((Integer val)->val>=3).max((Integer val1,Integer val2) -> val1-val2);
+        System.out.println(filteredNumber4.get());
+        boolean hasValueGreterThanThree = f.stream().anyMatch((Integer n1) -> n1>=3);
+        System.out.println(hasValueGreterThanThree);
+        Optional<Integer> hasValueGreterThanThree1 = f.stream().filter((Integer n1) -> n1>=3).findFirst();
+        System.out.println(hasValueGreterThanThree1.get());
+        System.out.println("....................................................");
+
+        List<Integer> nums = Arrays.asList(1111112,211112,341111,55,66,77,88,99,929,9999,9999922);
+        //sequential processing
+        long sequentialProcessingStartTime = System.currentTimeMillis();
+        nums.stream()
+                .map((Integer val) -> val*val)
+                .count();
+        System.out.println("Sequential Processing Time taken : " +(System.currentTimeMillis()-sequentialProcessingStartTime) + " milliseconds");
+
+        //Parallel Processing
+
+        long parallelProcessingStartTime = System.currentTimeMillis();
+        nums.parallelStream().map((Integer val) -> val* val).count();
+        System.out.println("Parallel processingTime taken : " + (System.currentTimeMillis()-parallelProcessingStartTime)+" milli seconds");
+
+
+
+
+
+
+
     }
 }
