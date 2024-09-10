@@ -14,21 +14,21 @@ public class SharedBuffer{
 
     public synchronized void produceItem(int i) throws InterruptedException{
         while(sharedBuffer.size() == bufferSize){
+            System.out.println("The Buffer is Full.....");
             wait();
         }
         sharedBuffer.add(i);
         System.out.println("Item added into the buffer is : " + i);
         notify();
-
     }
     public synchronized void consumeItem() throws InterruptedException{
         while(sharedBuffer.isEmpty()){
+            System.out.println("The buffer is empty........");
             wait();
         }
         int n = sharedBuffer.remove();
         System.out.println("Removed Item from Buffer is : "+ n);
         notify();
-
     }
 }
 class Test{
@@ -55,7 +55,6 @@ class Test{
                 }
             }
         });
-
         produceItem.start();
         consumeItem.start();
     }
