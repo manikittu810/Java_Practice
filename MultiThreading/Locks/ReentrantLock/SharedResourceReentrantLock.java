@@ -1,4 +1,4 @@
-package InterviewPrep.MultiThreading.Locks;
+package InterviewPrep.MultiThreading.Locks.ReentrantLock;
 
 import java.util.concurrent.locks.ReentrantLock;
 
