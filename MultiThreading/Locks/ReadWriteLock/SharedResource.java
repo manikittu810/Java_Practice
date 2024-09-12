@@ -10,7 +10,7 @@ public class SharedResource {
             lock.readLock().lock();
             isAvailable = true;
             System.out.println(Thread.currentThread().getName() + " producer monitor lock acquired");
-            Thread.sleep(1000);
+            Thread.sleep(5000);
 
         }catch(InterruptedException ignored){}
         finally{
