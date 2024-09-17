@@ -27,8 +27,6 @@ public class Main {
                     }
                 });
             }
-
-
             //I need to end the worker threads after the task completion
 
             threadPoolExecutor.shutdown();
