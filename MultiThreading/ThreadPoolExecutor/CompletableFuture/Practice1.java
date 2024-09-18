@@ -43,6 +43,15 @@ public class Practice1 {
            }
            System.out.println(obj.get());
 
+           CompletableFuture<Integer> obj3 = CompletableFuture.supplyAsync(()->{
+               return 11;
+           },threadPoolExecutor);
+           CompletableFuture<String> obj4 = CompletableFuture.supplyAsync(()->{
+               return "smk";
+           },threadPoolExecutor);
+
+           CompletableFuture<String> completeObj = obj3.thenCombine(obj4,(Integer val1,String val2)  -> Thread.currentThread().getName().toLowerCase()+" : " +val1+" "+val2);
+           System.out.println(completeObj.get());
 
     }catch(Exception ignored){}
     }
