@@ -5,15 +5,28 @@ import java.util.concurrent.*;
 public class PracticeExample1 {
     public static void main(String[] args) {
         ThreadPoolExecutor threadPoolExecutor  = new ThreadPoolExecutor(
-                1,1,1, TimeUnit.SECONDS,new ArrayBlockingQueue<>(2), Executors.defaultThreadFactory(),new ThreadPoolExecutor.AbortPolicy());
-
+                1,1,5, TimeUnit.SECONDS,new ArrayBlockingQueue<>(2), Executors.defaultThreadFactory(),new ThreadPoolExecutor.AbortPolicy());
+        threadPoolExecutor.allowCoreThreadTimeOut(true);
         Future<?> obj = threadPoolExecutor.submit(()->{
-            System.out.println("Task Submitted ");
+            try{
+                Thread.sleep(5000);
+                System.out.println("Task Submitted ");
+            }catch(Exception e){
+
+            }
         });
-        threadPoolExecutor.shutdown();
+        System.out.println(obj.isDone());
         try{
-            Thread.sleep(1000);
+            obj.get(2,TimeUnit.SECONDS);
+        }catch(TimeoutException e){
+            System.out.println("TimeOut Exception happened");
+        }
+        catch(Exception e){}
+
+        try{
+            obj.get();
         }catch(Exception e){}
+
         System.out.println(obj.isDone());
         System.out.println(obj.isCancelled());
 
