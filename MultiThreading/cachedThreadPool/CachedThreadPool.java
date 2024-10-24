@@ -14,10 +14,8 @@ public class CachedThreadPool {
                 final int task = i;
                 try {
                     Thread.sleep(50L);
-                    executor.submit(() -> {
-
-                        System.out.println(Thread.currentThread().getName() + " is running task " + task);
-                    });
+                    executor.submit(() ->
+                        System.out.println(Thread.currentThread().getName() + " is running task " + task));
                 } catch (Exception ignored) {
                 }
             }
@@ -30,13 +28,26 @@ public class CachedThreadPool {
             for(int i=0;i<=10;i++) {
                 try {
                     Thread.sleep(50L);
-                    executorService.submit(() -> {
-                        System.out.println("Current Thread name is : " + Thread.currentThread().getName());
-                    });
+                    executorService.submit(() ->
+                        System.out.println("Current Thread name is : " + Thread.currentThread().getName()));
                 } catch (Exception ignored) {
                 }
             }
     executorService.shutdown();
+        }catch(Exception ignored){}
+
+        System.out.println("---------------------Single Thread Executor-----------------------------------");
+        try{
+            ExecutorService executorService1 = Executors.newSingleThreadExecutor();
+            for(int i=0;i<=10;i++) {
+                try {
+                    Thread.sleep(50L);
+                    executorService1.submit(() -> System.out.println("Current Thread name is : " + Thread.currentThread().getName()));
+                } catch (InterruptedException e) {
+                    Thread.currentThread().interrupt();
+                }
+            }
+            executorService1.shutdown();
         }catch(Exception ignored){}
 
     }
