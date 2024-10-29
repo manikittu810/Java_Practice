@@ -16,11 +16,13 @@ package InterviewPrep.pairInJavaImpl;
 //*******************************************************************************************************************
 
 
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class Pair <U extends Comparable<U>,V extends Comparable<V>> implements Comparable<Pair<U,V>>{
+public class Pair <U extends Comparable<U>,V extends Comparable<V>> implements Comparable<Pair<U,V>>{ // this is for Comparable interface implementation
+
     private final U first;
     private final V second;
 
@@ -28,9 +30,15 @@ public class Pair <U extends Comparable<U>,V extends Comparable<V>> implements C
         this.first = first;
         this.second = second;
     }
-@Override
-public int compareTo(Pair<U,V> other){
-    return  this.first.compareTo(other.first);
+    public U getFirst(){
+        return first;
+    }
+    public V getSecond(){
+        return second;
+    }
+    @Override
+    public int compareTo(Pair<U,V> other){//this is for implementing the method from Comparable
+     return  this.first.compareTo(other.first);
     }
     @Override
     public String toString(){
@@ -40,16 +48,23 @@ public int compareTo(Pair<U,V> other){
 
 class Main{
     public static void main(String[] args) {
-        List<Pair<Integer,Integer>> obj = new ArrayList<>();
-        obj.add(new Pair<>(1,2));
-        obj.add(new Pair<>(0,1));
+        List<Pair<Integer, Integer>> obj = new ArrayList<>();
+        obj.add(new Pair<>(1, 2));
+        obj.add(new Pair<>(0, 1));
+        obj.add(new Pair<>(3, 0));
 
+        // Sort naturally by `first` using `Comparable` implementation
         Collections.sort(obj);
-
-        for(Pair<Integer,Integer> P : obj){
+        System.out.println("Sorted by first (natural order):");
+        for (Pair<Integer, Integer> P : obj) {
             System.out.println(P);
         }
 
-        System.out.println(obj);
+        // Sort by `second` using `PairComparatorBySecond`
+        Collections.sort(obj, new PairComparatorBySecond<>());
+        System.out.println("Sorted by second:");
+        for (Pair<Integer, Integer> P : obj) {
+            System.out.println(P);
+        }
     }
 }
