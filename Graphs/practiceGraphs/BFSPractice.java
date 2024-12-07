@@ -17,7 +17,6 @@ public class BFSPractice {
         Queue<Integer> q = new LinkedList<>();
         visited[source] =true;
         q.offer(source);
-        System.out.print("BFS : ");
         while(!q.isEmpty()){
             int exploreVertex = q.poll();
             System.out.print(exploreVertex +" ");

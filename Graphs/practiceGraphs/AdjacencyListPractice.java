@@ -23,13 +23,14 @@ class ListTest{
             for(int j=0;j<v;j++){
                 list.add(new ArrayList<>());
             }
-            for(int k=0;k<v;k++){
+            int edges = sc.nextInt();
+            for(int k=0;k<edges;k++){
                 int vertexU = sc.nextInt();
                 int vertexV = sc.nextInt();
                 obj.printList(list,vertexU,vertexV);
             }
-            System.out.println("Adjacency List : ");
             obj1.printAdjacencyList(list);
+            System.out.println("BFS Traversal:");
             obj2.disconnectedBFS(list,v);
         }
         sc.close();
@@ -37,6 +38,7 @@ class ListTest{
 }
 class PrintList{
     public void printAdjacencyList( List<List<Integer>> res){
+        System.out.println("Adjacency List : ");
         for(int i=0;i<res.size();i++){
             System.out.print(i+": ");
             for(int j=0;j<res.get(i).size();j++){
