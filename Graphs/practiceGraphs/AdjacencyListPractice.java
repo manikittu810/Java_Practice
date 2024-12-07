@@ -1,4 +1,4 @@
-package InterviewPrep.Graphs;
+package InterviewPrep.Graphs.practiceGraphs;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,6 +14,7 @@ class ListTest{
     public static void main(String[] args) {
         AdjacencyListPractice obj =  new AdjacencyListPractice();
         PrintList obj1 = new PrintList();
+        BFSPractice obj2 = new BFSPractice();
         Scanner sc = new Scanner(System.in);
         int t = sc.nextInt();
         for (int i=0;i<t;i++){
@@ -27,7 +28,9 @@ class ListTest{
                 int vertexV = sc.nextInt();
                 obj.printList(list,vertexU,vertexV);
             }
+            System.out.println("Adjacency List : ");
             obj1.printAdjacencyList(list);
+            obj2.disconnectedBFS(list,v);
         }
         sc.close();
     }
