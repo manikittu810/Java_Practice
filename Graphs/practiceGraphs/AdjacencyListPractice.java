@@ -1,6 +1,9 @@
 package InterviewPrep.Graphs.practiceGraphs;
 
+import InterviewPrep.Graphs.ShortestPathUndirected;
+
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
@@ -15,6 +18,7 @@ class ListTest{
         AdjacencyListPractice obj =  new AdjacencyListPractice();
         PrintList obj1 = new PrintList();
         BFSPractice obj2 = new BFSPractice();
+        ShortestPathUndirected obj3 = new ShortestPathUndirected();
         Scanner sc = new Scanner(System.in);
         int t = sc.nextInt();
         for (int i=0;i<t;i++){
@@ -29,9 +33,13 @@ class ListTest{
                 int vertexV = sc.nextInt();
                 obj.printList(list,vertexU,vertexV);
             }
+            System.out.print("give the source as input for finding the Shortest Path for the current source : ");
+            int source = sc.nextInt();
             obj1.printAdjacencyList(list);
             System.out.println("BFS Traversal:");
             obj2.disconnectedBFS(list,v);
+            System.out.println("shortestPath Algorithm for Undirected graph with source is : " + source);
+            System.out.println(Arrays.toString(obj3.findShortestPath(list, v, 0)));
         }
         sc.close();
     }
