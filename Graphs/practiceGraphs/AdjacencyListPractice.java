@@ -1,5 +1,7 @@
 package InterviewPrep.Graphs.practiceGraphs;
 
+import InterviewPrep.Graphs.CycleInUndirectedGraphBFS;
+import InterviewPrep.Graphs.CycleInUndirectedGraphDFS;
 import InterviewPrep.Graphs.DFSUndirectedImpl;
 import InterviewPrep.Graphs.ShortestPathUndirected;
 
@@ -21,6 +23,8 @@ class ListTest{
         BFSPractice obj2 = new BFSPractice();
         ShortestPathUndirected obj3 = new ShortestPathUndirected();
         DFSUndirectedImpl obj4 = new DFSUndirectedImpl();
+        CycleInUndirectedGraphDFS obj5 = new CycleInUndirectedGraphDFS();
+        CycleInUndirectedGraphBFS obj6 = new CycleInUndirectedGraphBFS();
         Scanner sc = new Scanner(System.in);
         int t = sc.nextInt();
         for (int i=0;i<t;i++){
@@ -44,6 +48,10 @@ class ListTest{
             System.out.println(Arrays.toString(obj3.findShortestPath(list, v, 0)));
             System.out.println("DFS Traversal:");
             System.out.println(obj4.DFS(list));
+            System.out.print("Cycle Detection using DFS for an Undirected Graph : ");
+            System.out.println(obj5.isCycleDetectedDFS(list));
+            System.out.print("Cycle Detection using BFS for an Undirected Graph : ");
+            System.out.println(obj6.detectCycleBFS(list));
         }
         sc.close();
     }
