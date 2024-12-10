@@ -19,9 +19,9 @@ public class CycleInUndirectedGraphDFS {
                 if(cycleDFSDetect(l,visited,i,source)){
                     return true;
                 }
-                else if(i!=parent){
-                    return true;
-                }
+            }
+            else if(i!=parent){
+                return true;
             }
         }
         return false;
