@@ -6,8 +6,10 @@ public class CycleInUndirectedGraphDFS {
     public boolean isCycleDetectedDFS(List<List<Integer>> adjList){
         boolean [] visited = new boolean[adjList.size()];
         for(int i=0;i<adjList.size();i++){
-            if(cycleDFSDetect(adjList,visited,i,-1)){
-                return true;
+            if(!visited[i]){
+                if(cycleDFSDetect(adjList,visited,i,-1)){
+                    return true;
+                }
             }
         }
         return false;
@@ -16,7 +18,7 @@ public class CycleInUndirectedGraphDFS {
         visited[source] = true;
         for(int i : l.get(source)){
             if(!visited[i]){
-                if(cycleDFSDetect(l,visited,i,source)){
+                if(cycleDFSDetect(l, visited, i, source)){
                     return true;
                 }
             }
