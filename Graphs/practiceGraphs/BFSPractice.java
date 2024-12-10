@@ -27,6 +27,7 @@ public class BFSPractice {
                 }
             }
         }
+        System.out.println();
 
     }
 }
