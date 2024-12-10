@@ -1,5 +1,6 @@
 package InterviewPrep.Graphs.practiceGraphs;
 
+import InterviewPrep.Graphs.DFSUndirectedImpl;
 import InterviewPrep.Graphs.ShortestPathUndirected;
 
 import java.util.ArrayList;
@@ -19,6 +20,7 @@ class ListTest{
         PrintList obj1 = new PrintList();
         BFSPractice obj2 = new BFSPractice();
         ShortestPathUndirected obj3 = new ShortestPathUndirected();
+        DFSUndirectedImpl obj4 = new DFSUndirectedImpl();
         Scanner sc = new Scanner(System.in);
         int t = sc.nextInt();
         for (int i=0;i<t;i++){
@@ -40,6 +42,8 @@ class ListTest{
             obj2.disconnectedBFS(list,v);
             System.out.println("shortestPath Algorithm for Undirected graph with source is : " + source);
             System.out.println(Arrays.toString(obj3.findShortestPath(list, v, 0)));
+            System.out.println("DFS Traversal:");
+            System.out.println(obj4.DFS(list));
         }
         sc.close();
     }
