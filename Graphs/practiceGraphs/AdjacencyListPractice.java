@@ -1,9 +1,6 @@
 package InterviewPrep.Graphs.practiceGraphs;
 
-import InterviewPrep.Graphs.CycleInUndirectedGraphBFS;
-import InterviewPrep.Graphs.CycleInUndirectedGraphDFS;
-import InterviewPrep.Graphs.DFSUndirectedImpl;
-import InterviewPrep.Graphs.ShortestPathUndirected;
+import InterviewPrep.Graphs.*;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -25,6 +22,7 @@ class ListTest{
         DFSUndirectedImpl obj4 = new DFSUndirectedImpl();
         CycleInUndirectedGraphDFS obj5 = new CycleInUndirectedGraphDFS();
         CycleInUndirectedGraphBFS obj6 = new CycleInUndirectedGraphBFS();
+        CycleDirectedGraphDFS obj7 = new CycleDirectedGraphDFS();
         Scanner sc = new Scanner(System.in);
         int t = sc.nextInt();
         for (int i=0;i<t;i++){
@@ -52,6 +50,9 @@ class ListTest{
             System.out.println(obj5.isCycleDetectedDFS(list));
             System.out.print("Cycle Detection using BFS for an Undirected Graph : ");
             System.out.println(obj6.detectCycleBFS(list));
+            System.out.print("Cycle Detection using DFS in a directed Graph : ");
+            String s = obj7.detectCycleInDirectGraphUsingDFS(list,v) ? "Cycle Detected in a directed graph using DFS" : "Cycle not detected";
+            System.out.println(s);
         }
         sc.close();
     }

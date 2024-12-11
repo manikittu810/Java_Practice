@@ -9,7 +9,7 @@ public class DFSUndirectedImpl {
         l.add(source);
         for(int i:adj.get(source)){
             if(!visited[i]){
-                visited[i] = true;
+//                visited[i] = true;
                 implementDFSRecursive(adj,i,visited,l);
             }
         }
