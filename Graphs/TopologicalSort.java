@@ -42,6 +42,7 @@ class TestKahnsBFS {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         TopologicalSort obj = new TopologicalSort();
+        TopologicalSortKahnsDFS obj1 = new TopologicalSortKahnsDFS();
         System.out.println("Enter number of test cases:");
         int t = sc.nextInt();
         for (int i = 0; i < t; i++) {
@@ -65,6 +66,7 @@ class TestKahnsBFS {
                 }
             printList(adjList);
             obj.kahnsBFS(adjList,V);
+            obj1.kahnsDFS(adjList,V);
         }
         sc.close();
     }
