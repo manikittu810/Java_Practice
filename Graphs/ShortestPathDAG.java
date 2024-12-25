@@ -36,7 +36,7 @@ public class ShortestPathDAG {
 
         while(!st.isEmpty())
         {
-            int u = st.pop();
+            int u = st.pop();//vertex -> v.vertex and now checking if v.vertex -> that means some vertex number now d[u] is literally ->v.vertex
             if(distance[u]!=Integer.MAX_VALUE) {
                 for (Pair v : adjList.get(u)) {
                     if (distance[v.vertex] > distance[u] + v.weight) {
