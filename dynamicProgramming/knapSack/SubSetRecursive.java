@@ -38,6 +38,7 @@ public class SubSetRecursive {
 class TestSubsetRecursive{
     public static void main(String[] args) {
         SubSetRecursive obj = new SubSetRecursive();
+        SubSetSumTabulation obj2 = new SubSetSumTabulation();
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter number of test cases : ");
         int t = sc.nextInt();
@@ -45,15 +46,17 @@ class TestSubsetRecursive{
             System.out.println("Enter the size of the weight array : ");
             int n = sc.nextInt();
             int []wt = new int[n];
-            System.out.println("enter the weight array : ");
+            System.out.println("enter the weights array : ");
             for(int j=0;j<n;j++){
                 wt[j] = sc.nextInt();
             }
             System.out.println("Enter the Sum : ");
             int sum = sc.nextInt();
-            System.out.println("Is subset present recursive: " + obj.isSubSetPresent(wt,sum,n));
+            System.out.println("Is SubsetSum (recursive) present : " + obj.isSubSetPresent(wt,sum,n));
             Boolean[][] memo = new Boolean[n+1][sum+1];
-            System.out.println("is SubsetSum (Memoized) present : "+ obj.isSubSetSumMemoize(wt,sum,n,memo));
+            System.out.println("Is SubsetSum (Memoized) present : "+ obj.isSubSetSumMemoize(wt,sum,n,memo));
+            System.out.println("Is SubsetSum (Tabulation) present : "+ obj2.tabulationSubSetSum(wt,sum,n));
+
         }
         sc.close();
     }
