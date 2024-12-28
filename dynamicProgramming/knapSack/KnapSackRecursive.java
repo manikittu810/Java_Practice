@@ -21,6 +21,7 @@ public class KnapSackRecursive {
 class TestKnapSack{
     public static void main(String[] args) {
         KnapSackRecursive obj = new KnapSackRecursive();
+        KnapSackTabulation obj2 = new KnapSackTabulation();
         Scanner sc = new Scanner(System.in);
         int t = sc.nextInt();
         for(int i=0;i<t;i++){
@@ -35,7 +36,8 @@ class TestKnapSack{
             }
             System.out.println("Enter the max capacity of the KnapSack : ");
             int W = sc.nextInt();
-            System.out.println("The Max value/profit we can get from the knapsack is  : "+obj.getMaxKnapSack(wt,val,W,n));
+            System.out.println("The Max value/profit we can get from the knapsack(Recursive) is  : "+obj.getMaxKnapSack(wt,val,W,n));
+            System.out.println("KnapSack Tabulation, MaxProfit is  : " + obj2.knapSackTabulation(wt,val,W));
         }
         sc.close();
     }
