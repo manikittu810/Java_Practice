@@ -34,7 +34,7 @@ public class Main {
 //'ThreadPoolExecutor' used with 'try'-with-resources statement
 
 
-        // we can also use threadPoolExecutor.shutdownNow() for a forced termination of worker threads neven though they are simulating or working on some task.
+        // we can also use threadPoolExecutor.shutdownNow() for a forced termination of worker threads even though they are simulating or working on some task.
 
     }
 }

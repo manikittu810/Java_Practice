@@ -57,8 +57,14 @@ public class NumberOfIslands {
                 int newX = curX+dx[f];
                 int newY = curY+dy[f];
 
-                if(newX >= 0 && newY >= 0 && newX < grid.length && newY < grid[0].length &&
-                        !visited[newX][newY] && grid[newX][newY] == '1'){                    visited[newX][newY] = true;
+                if(newX >= 0
+                        && newY >= 0
+                        && newX < grid.length
+                        && newY < grid[0].length
+                        && !visited[newX][newY]
+                        && grid[newX][newY] == '1'){
+
+                    visited[newX][newY] = true;
                     q.add(new int[]{newX,newY});
                 }
             }
