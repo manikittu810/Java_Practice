@@ -10,6 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="jdbc-config-dbUtil" target="21" />
       <module name="jdbc-test" target="21" />
       <module name="JDBC-Test" target="21" />
     </bytecodeTargetLevel>

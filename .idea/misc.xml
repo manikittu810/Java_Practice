@@ -14,11 +14,13 @@
         <option value="$PROJECT_DIR$/Oops/pom.xml" />
         <option value="$PROJECT_DIR$/jdbc-test/pom.xml" />
         <option value="$PROJECT_DIR$/jdbc/pom.xml" />
+        <option value="$PROJECT_DIR$/jdbc-config-dbUtil/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/Oops/JDBC-Test/pom.xml" />
+        <option value="$PROJECT_DIR$/jdbc-config-dbUtil/pom.xml" />
         <option value="$PROJECT_DIR$/jdbc-test/pom.xml" />
       </set>
     </option>
