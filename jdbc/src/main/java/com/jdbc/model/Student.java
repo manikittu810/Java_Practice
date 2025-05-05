@@ -39,11 +39,22 @@ public class Student {
         this.age = age;
     }
 
-    public Student(String name, String email, int id){
+    public Student(String name, String email, int age){
         this.name = name;
         this.email = email;
         this.age = age;
     }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", email='" + email + '\'' +
+                ", age=" + age +
+                '}';
+    }
+
     public Student(int id, String name, String email, int age) {
         this(name, email, age);
         this.id = id;

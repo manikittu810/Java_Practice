@@ -15,9 +15,9 @@ public class StudentDAO {
         String sql ="insert into students (name,email,age) values (?,?,?)";
         try(Connection con = DriverManager.getConnection(url,username,password);
             PreparedStatement stmt = con.prepareStatement(sql)){
-            stmt.setString(1,"sms");
-            stmt.setString(2,"smk@example.com");
-            stmt.setInt(3,18);
+            stmt.setString(1, student.getName());
+            stmt.setString(2, student.getEmail());
+            stmt.setInt(3, student.getAge());
             stmt.executeUpdate();
         }catch(SQLException e){
             e.printStackTrace();
@@ -25,7 +25,7 @@ public class StudentDAO {
     }
     public List<Student> readAll(){
         List<Student> student = new ArrayList<>();
-        String sql = "select * from students";
+        String sql = "SELECT * FROM students";
         try(Connection con = DriverManager.getConnection(url,username,password);
         PreparedStatement stmt = con.prepareStatement(sql);
         ResultSet rs = stmt.executeQuery()){

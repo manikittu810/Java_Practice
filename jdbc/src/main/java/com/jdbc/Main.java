@@ -14,7 +14,7 @@ public class Main {
         dao.readAll().forEach(System.out::println);
 
         // Update
-        dao.update(new Student(1, "Alice Johnson", "alicej@example.com", 23));
+        dao.update(new Student(8, "Alice Johnson", "alicej@example.com", 23));
 
         // Delete
         dao.delete(1);
