@@ -12,7 +12,15 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/Oops/pom.xml" />
+        <option value="$PROJECT_DIR$/jdbc-test/pom.xml" />
+        <option value="$PROJECT_DIR$/jdbc/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/Oops/JDBC-Test/pom.xml" />
+        <option value="$PROJECT_DIR$/jdbc-test/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_21" default="true" project-jdk-name="openjdk-21" project-jdk-type="JavaSDK">
