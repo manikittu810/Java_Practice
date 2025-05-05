@@ -38,7 +38,7 @@ public class Student {
     public void setAge(int age) {
         this.age = age;
     }
-
+    // Constructor for CREATE (no ID)
     public Student(String name, String email, int age){
         this.name = name;
         this.email = email;
@@ -54,7 +54,7 @@ public class Student {
                 ", age=" + age +
                 '}';
     }
-
+    // Constructor for READ/UPDATE (includes ID)
     public Student(int id, String name, String email, int age) {
         this(name, email, age);
         this.id = id;
