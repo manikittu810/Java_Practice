@@ -3,22 +3,26 @@ package com.jdbc;
 import com.jdbc.dao.StudentDAO;
 import com.jdbc.model.Student;
 
+import java.util.Arrays;
 import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
         StudentDAO dao = new StudentDAO();
-
+        List<Student> studentList = Arrays.asList(new Student("Manikrishna","Mani@@gmail.com",25),
+        new Student("Manisharma","sharma@gmail.com",17),
+    new Student("Dhruva","dhruva@gmail.com",25));
         //Create
-        dao.create(new Student("Manikrishna","Mani@@gmail.com",25));
-        dao.create(new Student("Manisharma","sharma@gmail.com",17));
-        dao.create(new Student("Dhruva","dhruva@gmail.com",25));
+        for(Student s : studentList){
+            dao.create(s);
+        }
+
         System.out.println("After create() Operation");
 
 
         //readAll();
 
-        List<Student> studentList = dao.readAll();
+        studentList = dao.readAll();
 
         for(Student s : studentList){
             System.out.println(s);
